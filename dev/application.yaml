@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application2
-  namespace: argocd1
+  name: myapp-argo-application
+  namespace: argocdibm
 spec:
   project: default
 
@@ -10,15 +10,14 @@ spec:
   source:
     repoURL: https://github.com/Chetancloud/argoCD
     targetRevision: HEAD
-    path: dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: myapp1
+    namespace: myappibm
 
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=false
+    - CreateNamespace=true
 
     automated:
       selfHeal: true
