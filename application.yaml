@@ -2,16 +2,24 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argo-application
+<<<<<<< HEAD
   namespace: argocdchetan
+=======
+  namespace: argocdibm
+>>>>>>> a7f258f (adding application.yaml file)
 spec:
   project: default
 
   source:
     repoURL: https://github.com/Chetancloud/argoCD
     targetRevision: HEAD
+<<<<<<< HEAD
   destination: 
+=======
+  destination:
+>>>>>>> a7f258f (adding application.yaml file)
     server: https://kubernetes.default.svc
-    namespace: myapp1
+    namespace: myappibm
 
   syncPolicy:
     syncOptions:
