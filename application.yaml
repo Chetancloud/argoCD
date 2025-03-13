@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Chetancloud/argoCD
+    repoURL: https://github.com/Chetancloud/argoCD.git
     targetRevision: HEAD
     path: dev
   destination:
