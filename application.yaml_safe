@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo-application
+<<<<<<< HEAD
+<<<<<<< HEAD
+  namespace: argocdchetan
+=======
+  namespace: argocdibm
+>>>>>>> a7f258f (adding application.yaml file)
+=======
+  namespace: argocdchetan
+>>>>>>> d5bd16b (adding app file for arfocdchetan namespace)
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Chetancloud/argoCD
+    targetRevision: HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  destination: 
+=======
+=======
+    path: dev
+>>>>>>> d5bd16b (adding app file for arfocdchetan namespace)
+  destination:
+>>>>>>> a7f258f (adding application.yaml file)
+    server: https://kubernetes.default.svc
+    namespace: argocdmyapp
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
